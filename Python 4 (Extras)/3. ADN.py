@@ -31,35 +31,47 @@ DNA_sequence = [
 01010101000011001100
 '''
 
-print(DNA_sequence[0][-1])
-print(DNA_sequence[0][0])
-
 
 testing_sequence = str(input('Ingrese la secuencia de DNA: '))
-print(testing_sequence)
 
 while len(testing_sequence) > 20 or len(testing_sequence) < 20:
     testing_sequence = str(input('La secuencia de DNA está compuesta por 20 caracteres. Inténtelo nuevamente: '))
+
+'''
 
 print(testing_sequence[0])
 print(testing_sequence[1])
 
 print('---------------')
 
-
+print('Hi', testing_sequence.count('0'))
+print('Bye', DNA_sequence[0].count('0'))
+'''
 
 indice = 0
 
 def DNA_comparison(sample, comparison):
 
     coincidences = 0
+    ceros = 0
+    unos = 1
+    sample_ceros = 0
+    sample_unos = 0
 
-    for index in range(0, len(DNA_sequence)):
-        seq_base = sample[index]
-        if seq_base == comparison:
-            coincidences += 1
+    sample_ceros = sample.count('0')
+    sample_unos = sample.count('1')
 
-    return coincidences
+    print('En sample hay: ', sample_ceros, 'y', sample_unos)
+
+    for i in range(len(DNA_sequence)):
+        ceros = DNA_sequence[i - 1].count('0')
+        unos = DNA_sequence[i - 1].count('1')
+        print(f'Ceros en posición {i+1}', ceros)
+        print(f'Unos en posición {i+1}', unos, '\n')
+
+
+
+
 
 print(DNA_comparison(testing_sequence, DNA_sequence))
 
