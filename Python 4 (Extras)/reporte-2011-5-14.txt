@@ -1,0 +1,6 @@
+VINA DEL MAR: maximas 26, minimas 9
+Valparaiso: maximas 24, minimas 10
+QUILPUE: maximas 30, minimas 7
+OLMUE: maximas 29, minimas 5
+Limache: maximas 23, minimas 9
+Villa Alemana: maximas 22, minimas 9
