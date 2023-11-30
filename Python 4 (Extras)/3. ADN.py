@@ -46,34 +46,43 @@ print('---------------')
 
 print('Hi', testing_sequence.count('0'))
 print('Bye', DNA_sequence[0].count('0'))
-'''
+
 
 indice = 0
 
 def DNA_comparison(sample, comparison):
 
-    coincidences = 0
-    ceros = 0
-    unos = 1
-    sample_ceros = 0
-    sample_unos = 0
 
-    sample_ceros = sample.count('0')
-    sample_unos = sample.count('1')
 
-    print('En sample hay: ', sample_ceros, 'y', sample_unos)
+    for n in comparison:
+        print(n)
+        coincidences = 0
+        for i in range(len(n)):
+            if sample[i] == n[i]:
+                coincidences += 1
 
-    for i in range(len(DNA_sequence)):
-        ceros = DNA_sequence[i - 1].count('0')
-        unos = DNA_sequence[i - 1].count('1')
-        print(f'Ceros en posición {i+1}', ceros)
-        print(f'Unos en posición {i+1}', unos, '\n')
+    percentage = (coincidences/20)*100
+
+    return percentage
 
 
 
 
 
 print(DNA_comparison(testing_sequence, DNA_sequence))
+
+'''
+
+coincidences = 0
+for n in DNA_sequence:
+    for i in range(len(n)):
+        if testing_sequence[i] == n[i]:
+            coincidences += 1
+
+print('Hola', coincidences)
+percentage = (coincidences/20)*100
+
+print(percentage)
 
 
 

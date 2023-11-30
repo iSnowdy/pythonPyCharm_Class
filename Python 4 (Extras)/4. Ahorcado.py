@@ -69,9 +69,9 @@ def adivinar():
         print('Te has quedado sin intentos! La palabra era' + ' ' + guess)
 
 
-    again = str(input('¿Quieres intentarlo nuevamente? Y/N '))
+    again = str(input('¿Quieres intentarlo nuevamente? Y/N ')).lower()
 
-    if again == 'Y':
+    if again == 'y':
 
         menu()
 
