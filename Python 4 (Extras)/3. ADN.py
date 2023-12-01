@@ -14,7 +14,33 @@
 # Los datos de las listas han de ser ingresados por el programador. Sin embargo la secuencia a comparar ha de ser
 # ingresada por el usuario; es la muestra encontrada en la escena del crimen.
 
-personas = [
+
+'''
+01010101000011001100
+'''
+
+
+def DNA_comparison(muestra, nombres, cromosomas):
+
+    mejor_coincidencia = 0
+    sospechoso = ""
+
+    for i in range(len(cromosomas)):
+        coincidencias = 0
+
+        for j in range(len(muestra)):
+            coincidencias += muestra[j] == cromosomas[i][j]
+
+        if coincidencias > mejor_coincidencia:
+            mejor_coincidencia = coincidencias
+            sospechoso = nombres[i]
+
+    porcentaje_coincidencia = (mejor_coincidencia / len(muestra)) * 100
+
+    return sospechoso, porcentaje_coincidencia
+
+
+suspects = [
     'Pedo Dominguez', 'Juan Perez', 'Diego San Joan',
     'Dawud Nicholson', 'Jemma Erickson', 'Faye Oneal',
     'Lorna Howell', 'Rosanna Roth', 'Kingsley Underwood'
@@ -27,64 +53,15 @@ DNA_sequence = [
     '01110000011011101111', '00111001111000010111', '10111000111000110011'
 ]
 
-'''
-01010101000011001100
-'''
+
+sample = input("Ingrese la muestra de ADN encontrada en la escena del crimen (20 caracteres 0/1): ")
 
 
-testing_sequence = str(input('Ingrese la secuencia de DNA: '))
-
-while len(testing_sequence) > 20 or len(testing_sequence) < 20:
-    testing_sequence = str(input('La secuencia de DNA está compuesta por 20 caracteres. Inténtelo nuevamente: '))
-
-'''
-
-print(testing_sequence[0])
-print(testing_sequence[1])
-
-print('---------------')
-
-print('Hi', testing_sequence.count('0'))
-print('Bye', DNA_sequence[0].count('0'))
-
-
-indice = 0
-
-def DNA_comparison(sample, comparison):
+sospechoso, porcentaje = DNA_comparison(sample, suspects, DNA_sequence)
 
 
 
-    for n in comparison:
-        print(n)
-        coincidences = 0
-        for i in range(len(n)):
-            if sample[i] == n[i]:
-                coincidences += 1
-
-    percentage = (coincidences/20)*100
-
-    return percentage
-
-
-
-
-
-print(DNA_comparison(testing_sequence, DNA_sequence))
-
-'''
-
-coincidences = 0
-for n in DNA_sequence:
-    for i in range(len(n)):
-        if testing_sequence[i] == n[i]:
-            coincidences += 1
-
-print('Hola', coincidences)
-percentage = (coincidences/20)*100
-
-print(percentage)
-
-
-
+print(f"\nSospechoso encontrado: {sospechoso}")
+print(f"Porcentaje de parentesco: {porcentaje}%")
 
 
