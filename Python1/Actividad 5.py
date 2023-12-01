@@ -5,5 +5,6 @@ print(pi)
 
 r = float(input('Inserte el radio del círculo: '))
 print('Una vez sabemos el radio, procederemos a calcular el área de un círculo')
+
 A = pi * r**2
-print('El área del círculo con radio',r,'es',A)
+print('El área del círculo con radio', r, 'es', A)

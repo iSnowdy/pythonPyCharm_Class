@@ -4,20 +4,24 @@ número = float(input('Introduzca un número entre 0 y 10: '))
 
 número = int(número)  # Convierte el número del usuario en entero.
 
-while 0<=número<=10:
+while 0 <= número <= 10:
     print(número)
     número = número + 1
+
     if número == 10:
         print(número)
         print('Se ha llegado a 10')
         break
+
 else:
     while 0 > número or número > 10:
         número = int(input('Su número no es válido. Por favor introduzca un valor entre 0 y 10: '))
+
     else:
         while 0 <= número <= 10:
             print(número)
             número = número + 1
+
             if número == 10:
                 print(número)
                 print('Se ha llegado a 10')

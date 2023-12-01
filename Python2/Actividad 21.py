@@ -11,11 +11,12 @@ r_C = 0
 A_C = 0
 
 if str(input('Seleccione el cálculo del área de la siguiente figura geométrica:'
-             ' \nA) Triángulo \nB) Círculo \nEscriba A o B')) == 'A':
+             ' \nA) Triángulo \nB) Círculo \nEscriba A o B ')) == 'A':
     base_T = float(input('Dígame la base del triángulo del que desea calcular el área: '))
     altura_T = float(input('Dígamo la altura del triángulo del que desea calcular el área: '))
     A_T = (base_T * altura_T)/2
     print('El área de su triángulo es', A_T)
+
 else:
     r_C = float(input('Dígame el radio del círculo del que desea calcular el área: '))
     A_C = pi * r_C**2

@@ -10,4 +10,5 @@ while nota > 0 and nota < 11:
     lista.append(nota)
     nota = float(input('Introduzca la nota que desea guardar en una lista. Si quiere terminar la operación,'
                        'escriba un número que no esté entre 0 y 10: '))
+
 print(lista)

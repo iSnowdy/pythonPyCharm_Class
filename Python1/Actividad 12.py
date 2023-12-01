@@ -3,7 +3,9 @@
 número = 0
 
 número = float(input('Inserte un número: '))
+
 if número >= 10:
-    print('Su número',número,', es mayor o igual que 10')
+    print('Su número ' + str(número),', es mayor o igual que 10')
+
 else:
-    print('Su número',número,', es menor que 10')
+    print('Su número ' + str(número),', es menor que 10')

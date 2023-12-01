@@ -18,16 +18,18 @@ while máximo <= mínimo:
 número_aleatorio = random.randrange(mínimo, máximo)
 print(número_aleatorio)
 
-print('Adivina un número aleatorio entre', mínimo,'y',máximo)
+print('Adivina un número aleatorio entre', mínimo, 'y', máximo)
 número = int(input('Escribe tu primer número: '))
 
 while número > número_aleatorio or número < número_aleatorio:
     if número > número_aleatorio:
         número = int(input('¡Muy grande! Inténtalo de nuevo: '))
         count = count + 1
+
     else:
         número = int(input('Muy pequeño! Inténtalo de nuevo: '))
         count = count + 1
+
 else:
     print('¡Felicidades! Lo has adivinado. Efectivamente, el número aleatorio es', número_aleatorio)
 

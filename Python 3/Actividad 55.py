@@ -1,6 +1,6 @@
 # Actividad 55 - Crea un módulo para la validación de contraseñas. Dicho modulo debería cumplir con
 # los siguientes criterios:
-import string
+
 
 # 1. La contraseña debe tener un mínimo de 8 caracteres.
 # 2. Una contraseña debe contener: letras minúsculas, mayúsculas, números y al menos 1 caracter no alfanumérico.
@@ -8,7 +8,6 @@ import string
 # 4. Si la contraseña es válida, retornar True.
 # 5. Si la contraseña no es válida, retornar “La contraseña elegida no es segura”.
 
-from random import sample
 
 contra = str(input('Introduzca una nueva contraseña. Debe contener al menos 8 caracteres con una combinación de '
                    'minúsculas, mayúsculas, números y al menos 1 caracter no alfanumérico: '))

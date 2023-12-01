@@ -52,13 +52,12 @@ def llenar_informacion_persona():
     # Crear una lista para almacenar la información de cada persona
     lista_personas = []
 
-    continuar_ingresando = True
+    loop = True
 
-    while continuar_ingresando:
+    while loop:
         # Crear un diccionario vacío para almacenar la información de la persona actual
         persona = {}
 
-        # Solicitar al usuario que ingrese la información
         nombre = input("Ingrese el nombre de la persona: ")
         edad = input("Ingrese la edad de la persona: ")
         sexo = input("Ingrese el sexo de la persona: ")
@@ -81,9 +80,9 @@ def llenar_informacion_persona():
             print(f"{clave}: {valor}")
 
         # Preguntar al usuario si desea continuar ingresando información
-        respuesta = input("¿Quieres ingresar más información? (s/n): ")
-        if respuesta.lower() != 's':
-            continuar_ingresando = False
+        respuesta = input("¿Quieres ingresar más información? (Y/N): ").lower()
+        if respuesta.lower() != 'y':
+            loop = False
 
     # Imprimir la información acumulada en la lista
     print("\nInformación acumulada:")
@@ -92,5 +91,5 @@ def llenar_informacion_persona():
         for clave, valor in persona.items():
             print(f"{clave}: {valor}")
 
-# Llamar a la función para llenar la información de la persona
+
 llenar_informacion_persona()

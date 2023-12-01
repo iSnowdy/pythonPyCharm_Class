@@ -1,5 +1,5 @@
-# Actividad 10 - Queremos un programa que calcule el índice de masa corporal (IMC). Pediremos al usuario su estatura
-# y peso y mostraremos el resultado en pantalla.
+# Actividad 10 - Queremos un programa que calcule el índice de masa corporal (IMC). Pediremos al
+# usuario su estatura y peso y mostraremos el resultado en pantalla.
 # Opcionalmente, podemos mostrar que nos diga la clasificación según la Organización Mundial de la Salud de su IMC.
 
 altura = 0
@@ -10,14 +10,17 @@ IMC = 0
 # válido. Se define como valor válido la altura mínima y máxima (según Google) registrada en humanos.
 
 altura = float(input('Indique por favor su estatura en metros: '))
+
 while altura < 0.6 or altura > 2.6:
     altura = float(input('Por favor introduzca un valor correcto de su altura: '))
 
 # Hacemos lo mismo que con la estatura pero con el peso.
 
 peso = float(input('Indique por favor su peso en kilogramos: '))
+
 while peso < 20 or peso > 600:
     peso = float(input('Por favor introduzca un valor correcto de su peso: '))
+
 else:
     print('Gracias. Ahora procederemos a calcular su índice de masa corporal o IMC')
 

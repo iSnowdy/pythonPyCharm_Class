@@ -4,9 +4,10 @@ número = 0
 comprobar = 0
 
 número = float(input('Introduzca un número: '))
-comprobar = número%2
+comprobar = número % 2
 
 if comprobar == 0:
     print('Su número es par')
+
 else:
     print('Su número es impar')

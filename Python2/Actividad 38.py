@@ -13,6 +13,7 @@ while número_1 > número_2:
     número_2 = int(input(f'Error. Ha de introducir un número mayor que {número_1} :'))
 
 for i in range(número_1, número_2+1):
+    print(i)
     número_3 = i + número_3
 
 print('La suma desde', número_1, 'a', número_2, 'es:', número_3)

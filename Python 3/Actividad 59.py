@@ -26,7 +26,7 @@ for i in range(número_inicial):
         print(f'El numero en el índice {i} es mayor que', promedio) # Indicamos qué índice tienen esos números > prom
         count += 1 # Los contamos
 
-print(count,'datos son mayores que', promedio)
+print(count, 'datos son mayores que', promedio)
 
 '''
 6.5

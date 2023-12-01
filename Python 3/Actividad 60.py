@@ -17,13 +17,8 @@ def letter_counter(oracion):
         else:
             d[letters] += 1 # Y en caso de que lo esté, se vaya sumando
     d = dict(sorted(d.items())) # Ordenamos los elementos clave alfabéticamente
+
     return(d)
 
+
 print(letter_counter(sentence))
-
-
-
-
-
-
-

@@ -11,6 +11,7 @@ Año_Cualquiera = int(input('Escriba un año cualquiera: '))
 if Año_Actual < Año_Cualquiera:
     Año_Resultado = Año_Cualquiera - Año_Actual
     print('Para llegar al año', Año_Cualquiera, 'faltan', Año_Resultado, 'años')
+
 else:
     Año_Resultado = Año_Actual - Año_Cualquiera
-    print('Desde el año', Año_Actual, 'han pasado', Año_Resultado,'años')
+    print('Desde el año', Año_Actual, 'han pasado', Año_Resultado, 'años')

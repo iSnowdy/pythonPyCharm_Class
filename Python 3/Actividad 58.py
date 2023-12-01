@@ -24,7 +24,8 @@ v = (x, a)
 13. str(a + b)[2] ---> X es la ,
 '''
 
-print('Resultados')
+print('Resultados\n')
+
 
 print(a < b)
 print(y + w)
@@ -40,7 +41,15 @@ print(str(a[2] + b[2]))
 print(str((a + b)[2]))
 print(str(a + b)[2])
 
+print('\nPruebas\n')
+
+print(str(a+b)[0])
+print(str(a+b)[1])
+print(str(a+b)[2])
+
+'''
 prueba = str(a + b)[0]
 print(prueba)
 prueba = str(a + b)[2]
 print(prueba)
+'''

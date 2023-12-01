@@ -21,5 +21,6 @@ else:
     número_1 = swap # Pero si el número mayor es el segundo, hay que hacerla decreciente. Para ello hago un swap
     # para tener el número menor como comienzo de la lista, y le ordendo que la vaya disminuyendo en vez de
     # incrementar.
+    # Realmente innecesario. Con poner list(range(número_1, número_2 - 1, -1)) ya me hubiera ahorrado el swap
     lista_decr = list(range(número_2, número_1-1, -1))
     print(lista_decr)

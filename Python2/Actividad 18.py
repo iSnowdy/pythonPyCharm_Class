@@ -15,5 +15,6 @@ if número_2 > número_1:
 
 if número_1 % número_2 == 0:
     print(número_1, 'es múltiplo de ', número_2)
+
 else:
     print(número_1, 'no es múltiplo de', número_2)
