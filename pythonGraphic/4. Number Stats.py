@@ -1,49 +1,67 @@
-import tkinter
 from tkinter import *
-show = ''
 
-rows = int(input('¿Cuántos números quiere analizar? '))
+
+def calculate_this():
+    numbers = []
+    for entry_var in entry_vars:
+        value = entry_var.get()
+        if value:
+            number = float(value)
+            numbers.append(number)
+
+    if numbers:
+        addition = sum(numbers)
+        average = addition / len(numbers)
+        minimum = min(numbers)
+        maximum = max(numbers)
+
+        result_text = (
+            f"Sum: {round(addition, 2)}\n"
+            f"Average: {round(average, 2)}\n"
+            f"Min: {minimum}\n"
+            f"Max: {maximum}"
+        )
+        result_label.config(text=result_text)
+
+
+def create_entry_fields(num_entries):
+
+    for i in range(num_entries):
+        entry_frame = Frame(window) # Creamos el Frame
+        # Frame encapsula un label y un entry juntos asociados al input
+        entry_frame.pack()
+
+        entry_label = Label(entry_frame, text=f"Enter number {i + 1}:")
+        entry_label.pack()
+
+        entry_var = DoubleVar()
+        entry_vars.append(entry_var)
+        entry_field = Entry(entry_frame, textvariable=entry_var)
+        entry_field.pack()
+
+        entry_frames.append(entry_frame)
 
 
 window = Tk()
+window.title("Number Stats")
 
-myList = []
-myList_2 = []
+# Variables y listas
+entry_frames = []
+entry_vars = []
 
-numbers = DoubleVar()
+# Preguntar al usuario cuántos números desea analizar
+num_entries = int(input('¿Cuántos números desea analizar? '))
 
-def calculateThis():
+# Etiqueta para mostrar resultados
+result_label = Label(window, text="")
+result_label.pack()
 
-    myList.append(numbers.get())
+# Botón para calcular
+calculate_button = Button(window, text="Calculate", command=calculate_this)
+calculate_button.pack()
 
-    addition = sum(myList)
-    mean = addition / len(myList)
-    minim = min(myList)
-    maxim = max(myList)
+# Crear campos de entrada llamando a la función que depende del input
+create_entry_fields(num_entries)
 
-
-    show = ('Addition: ', addition,
-         'Mean: ', mean,
-         'Min: ', minim,
-         'max: ', maxim,
-         )
-
-    label.config(text=show)
-
-
-for i in range(1, rows + 1):
-
-    addition, mean, minim, maxim = (tkinter.DoubleVar() for _ in range(4))
-    myList_2[i] = [addition, mean, minim, maxim]
-
-    tkinter.Entry(window, textvariable=addition)
-    tkinter.Entry(window, textvariable=mean)
-    tkinter.Entry(window, textvariable=minim)
-    tkinter.Entry(window, textvariable=maxim)
-
-    tkinter.Button(window, text='Calculate', command=calculateThis)
-
-    label = Label(window, text=show)
-
-
+# Iniciar el bucle principal
 window.mainloop()
