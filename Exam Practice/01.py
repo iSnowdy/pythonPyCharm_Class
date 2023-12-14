@@ -487,3 +487,7 @@ def convertir_a_horas_minutos_segundos():
 
 
 menu()
+
+
+# ALT + SHIFT + flechas: mueves líneas enteras. En VS Code duplicas la línea. Para mover líneas basta ALT + flechas
+# ALT + click en líneas: escribir en varias a la vez
