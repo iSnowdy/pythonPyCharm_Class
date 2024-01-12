@@ -45,23 +45,19 @@ def create_entry_fields(num_entries):
 window = Tk()
 window.title("Number Stats")
 
-# Variables y listas
 entry_frames = []
 entry_vars = []
 
 # Preguntar al usuario cuántos números desea analizar
 num_entries = int(input('¿Cuántos números desea analizar? '))
 
-# Etiqueta para mostrar resultados
 result_label = Label(window, text="")
 result_label.pack()
 
-# Botón para calcular
 calculate_button = Button(window, text="Calculate", command=calculate_this)
 calculate_button.pack()
 
 # Crear campos de entrada llamando a la función que depende del input
 create_entry_fields(num_entries)
 
-# Iniciar el bucle principal
 window.mainloop()

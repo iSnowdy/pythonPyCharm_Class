@@ -90,6 +90,7 @@ def obtener_amigos (u):
 
 print('Mis amigos son', obtener_amigos(429900))
 
+
 def recomendar_amigos (u):
 
     recommendation = set()
